@@ -43,10 +43,35 @@ python manage.py runserver
 ## after the setup
 This will make available the API by default on 127.0.0.1:8000
 
+Navigate to http://localhost:8000/api/docs to access the Swagger documentation of the API.
+
+
 Django can then be tested with:
 ```bash
 pytest bloodtests/tests/test_bloodtests.py
 ```
+
+## Code Structure
+- `/livesmarttest` 
+  - ...
+  - `./settings.py` Django settings file
+  - `./urls.py` main url
+  - ...
+- `/bloodtests` API directory
+  - ...
+  - `./migrations/`
+  - `./test/` api, model and serializer testcases
+  - `./serializer.py` 
+  - `./models.py` Test model
+  - `./urls.py` api urls
+  - `./validators.py` 
+  - `./views.py` 
+
+- `/dockere` 
+- `/manage.py` 
+- `/README.md` 
+- `/requirement.txt` 
+- ...
 
 Note that steps 6 and 7 will only work after you have made changes. If you run them before making changes you'll likely see errors or failed tests.
 
