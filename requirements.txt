@@ -6,4 +6,4 @@ psycopg2<=2.8.5
 markdown==3.3.7
 django-filter==21.1
 django-rest-swagger==2.2.0
-six
+six==1.16.0
