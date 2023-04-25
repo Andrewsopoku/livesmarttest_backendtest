@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from bloodtests.models import Test
-
+from bloodtests.validators import RangeValidator
 
 
 class TestRangeFloatField(serializers.FloatField):
@@ -19,5 +19,5 @@ class TestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Test
         fields = "__all__"
-
+        validators = [RangeValidator()]
 
