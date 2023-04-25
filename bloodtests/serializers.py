@@ -4,7 +4,7 @@ from bloodtests.validators import RangeValidator
 
 
 class TestRangeFloatField(serializers.FloatField):
-
+    """ Float field which returns int representation of the value"""
     def to_representation(self, value):
         if value:
             return int(value)
